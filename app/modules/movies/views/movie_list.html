@@ -1,3 +1,15 @@
-<div class="bar bar-header bar-positive">
-  <h1 class="title">Movies</h1>
-</div>
+<ion-view>
+  <ion-nav-title>Movies</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button icon ion-film-marker" ng-click="moviesCtrl.showForm()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list">
+      <a class="item item-thumbnail-left" href="#" ng-repeat="movie in moviesCtrl.movies">
+        <img src="{{ movie.Poster }}">
+        <h2>{{ movie.Title }}</h2>
+        <p>{{ movie.Plot }}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
